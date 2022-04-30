@@ -1,7 +1,7 @@
 name: run-textlint
 on: 
   pull_request_target:
-    types: [ opened, synchronize, reopened ]
+    types: [ opened, synchronize ]
     paths: [ 'contents/**/*.md' ]
 jobs:
   run-textlint:
@@ -9,12 +9,6 @@ jobs:
     permissions:
       pull-requests: write
     steps:
-      - name: test
-        run: |
-          gh pr comment --body "test" "${URL}"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          URL: ${{ github.event.pull_request.html_url }}
       - uses: actions/checkout@v3
         with:
           ref: ${{ github.event.pull_request.head.sha }}
