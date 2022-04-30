@@ -4,6 +4,7 @@
 - `contents` : Markdown文書格納先ディレクトリ
 - `.textlintrc` : テキスト校正ルール
 - `.github/workflows/run-textlint.yml` : テキスト校正自動化の GitHub Actions ワークフロー
+- .etc
 
 ## 執筆者向けマニュアル
 ### 最初にやること
