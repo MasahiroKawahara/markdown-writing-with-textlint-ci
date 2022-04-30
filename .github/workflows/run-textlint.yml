@@ -1,0 +1,32 @@
+name: run-textlint
+on: 
+  pull_request_target:
+    types: [ opened, synchronize ]
+    paths: [ 'contents/**/*.md' ]
+jobs:
+  run-textlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14
+          cache: 'npm'
+      - run: |
+          npm install \
+          textlint \
+          textlint-filter-rule-allowlist \
+          textlint-rule-preset-ja-technical-writing
+      - run: npx textlint ./contents/**/*.md >> ./.textlint.log
+      - if: ${{ failure() }}
+        run: |
+          # create body file
+          pwd_esc=$(pwd | sed 's/\//\\\//g')
+          cat ./.textlint.log | sed "s/${pwd_esc}/### :policeman: ./g" >> ./.body.txt
+          # pr comment
+          gh pr comment --body-file ./.body.txt "${URL}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          URL: ${{ github.event.pull_request.html_url }}
