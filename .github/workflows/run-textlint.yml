@@ -1,11 +1,13 @@
 name: run-textlint
 on: 
   pull_request_target:
-    types: [ opened, synchronize, reopened ]
+    types: [ opened, synchronize ]
     paths: [ 'contents/**/*.md' ]
 jobs:
   run-textlint:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     steps:
       - name: test
         run: |
