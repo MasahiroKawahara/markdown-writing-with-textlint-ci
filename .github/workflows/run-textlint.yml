@@ -14,11 +14,7 @@ jobs:
         with:
           node-version: 14
           cache: 'npm'
-      - run: |
-          npm install \
-          textlint \
-          textlint-filter-rule-allowlist \
-          textlint-rule-preset-ja-technical-writing
+      - run: npm install
       - run: npx textlint ./contents/**/*.md >> ./.textlint.log
       - if: ${{ failure() }}
         run: |

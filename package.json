@@ -1,0 +1,24 @@
+{
+  "name": "markdown-project-with-textlint",
+  "version": "1.0.0",
+  "description": "- `contents` : Markdown文書格納先ディレクトリ - `.textlintrc` : テキスト校正ルール - `.github/workflows/run-textlint.yml` : テキスト校正自動化の GitHub Actions ワークフロー",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MasahiroKawahara/markdown-project-with-textlint.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MasahiroKawahara/markdown-project-with-textlint/issues"
+  },
+  "homepage": "https://github.com/MasahiroKawahara/markdown-project-with-textlint#readme",
+  "devDependencies": {
+    "textlint": "^12.1.1",
+    "textlint-filter-rule-allowlist": "^4.0.0",
+    "textlint-rule-preset-ja-technical-writing": "^7.0.0"
+  }
+}
