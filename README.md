@@ -1,4 +1,4 @@
-# markdown-project-with-textlint
+# markdown-writing-with-textlint-ci
 ## ファイル構成
 
 | Path                                 | Description                                   |
