@@ -1,4 +1,7 @@
 # markdown-writing-with-textlint-ci
+
+![img](https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2022/05/sc_20220501_165259_C5Nnpe.png)
+
 - ブログ:
 - サンプルプルリクエスト: https://github.com/MasahiroKawahara/markdown-writing-with-textlint-ci/pull/5
 
