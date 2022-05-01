@@ -1,4 +1,7 @@
 # markdown-writing-with-textlint-ci
+- ブログ:
+- サンプルプルリクエスト: https://github.com/MasahiroKawahara/markdown-writing-with-textlint-ci/pull/5
+
 ## ファイル構成
 
 | Path                                 | Description                                   |
