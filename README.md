@@ -1,10 +1,14 @@
 # markdown-project-with-textlint
 ## ファイル構成
 
-- `contents` : Markdown文書格納先ディレクトリ
-- `.textlintrc` : テキスト校正ルール
-- `.github/workflows/run-textlint.yml` : テキスト校正自動化の GitHub Actions ワークフロー
-- .etc
+| Path                                 | Description                                   |
+| --                                   | --                                            |
+| `README.md`                          | このファイル                                  |
+| `contents/`                          | Markdown文書格納先ディレクトリ                |
+| `.textlintrc`                        | テキスト校正ルール                            |
+| `.github/workflows/run-textlint.yml` | テキスト校正自動化のワークフロー              |
+| `package-lock.json`                  | (上記ワークフロー内の nodeセットアップで利用) |
+| `package.json`                       | (上記ワークフロー内の nodeセットアップで利用) |
 
 ## 執筆者向けマニュアル
 ### 最初にやること
