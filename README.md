@@ -1,6 +1,6 @@
 # markdown-writing-with-textlint-ci
 
-- ブログ:
+- ブログ: [【GitHub Actions】Markdown 執筆に textlintの自動校正を取り入れる | DevelopersIO](https://dev.classmethod.jp/articles/markdown-writing-with-textlint-ci/)
 - サンプルプルリクエスト: https://github.com/MasahiroKawahara/markdown-writing-with-textlint-ci/pull/5
 
 ## ファイル構成
